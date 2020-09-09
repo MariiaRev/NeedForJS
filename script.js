@@ -1,7 +1,8 @@
 const score = document.querySelector('.score'),
 start = document.querySelector('.start'),
 gameArea = document.querySelector('.gameArea'),
-car = document.createElement('div');
+car = document.createElement('div'),
+enemiesMaxCount = 9;                                     //number of different images for enemy cars
 
 car.classList.add('car');
 
@@ -42,7 +43,9 @@ function startGame(){
     for (let i = 0; i < getQuantityElements(100 * settings.traffic); i++) {
         const enemy = document.createElement('div');
         enemy.classList.add('enemy');
-        enemy.style.background = 'transparent url(\'./image/enemy2.png\') center / cover no-repeat';
+        enemy.style.background = `transparent url(\'./image/enemy${Math.floor(Math.random() * enemiesMaxCount + 1)}.png\') center / cover no-repeat`;
+        enemy.style.width = 50 + "px";
+        enemy.style.height = 100 + "px";
         enemy.y = -100 * settings.traffic * (i + 1);
         enemy.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - car.offsetWidth)) + 'px';
         enemy.style.top = enemy.y + 'px';
