@@ -1,0 +1,25 @@
+{
+  "name": "nfjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariiaRev/NeedForJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariiaRev/NeedForJS/issues"
+  },
+  "homepage": "https://github.com/MariiaRev/NeedForJS#readme",
+  "devDependencies": {
+    "electron": "^10.1.1",
+    "electron-packager": "^15.1.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
